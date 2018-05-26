@@ -14,11 +14,12 @@
 //#include "passwin.h"
 //#include "globals.h"
 //#include "options.h"
-#include "tutlib.h"
 
-#define MIN(x, y) (((x) > (y)) ? (y) : (x))
+#include "msgbox01.h"
 
 int ErrorMessageTX(LPSTR msg, unsigned int mode);
+extern int ErrorMessage(HWND hWnd, LPSTR msg, unsigned int mode);
+
 int MessageBoxTX(const char * msg, const char * lpszBanner, unsigned int mode);
 int SysLogMessage (  LPSTR msg, unsigned int mode );
 #ifdef WINDOZE

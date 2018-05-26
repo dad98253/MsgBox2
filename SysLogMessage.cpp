@@ -10,19 +10,18 @@
 #pragma comment(lib, "advapi32.lib")
 #endif
 
-#include "StdAfx.h"
+//#include "StdAfx.h"
 #ifdef WINDOZE
-#include <windows.h>
 #include <stdio.h>
-#include "passlinEventProvider.h"
+//#include "passlinEventProvider.h"
 #else
 #include <syslog.h>
 #endif
 #include <string.h>
-#include "passwin.h"
-#include "options.h"
-#include "globals.h"
-
+//#include "passwin.h"
+//#include "options.h"
+//#include "globals.h"
+#include "msgbox01.h"
 
 int SysLogMessage (  LPSTR msg, unsigned int mode ) {
 	unsigned int LogMessageType;

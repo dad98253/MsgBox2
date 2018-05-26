@@ -12,6 +12,12 @@
 #include <stdarg.h>
 #include <string.h>
 #include "debug.h"
+#ifdef WINDOZE
+#include <windows.h>
+#else
+#include "lindows.h"
+#endif
+
 //#include "StdAfx.h"
 //#include "resource.h"
 //#include "passwin.h"
@@ -21,6 +27,12 @@
 #define MIN(x, y) (((x) > (y)) ? (y) : (x))
 
 bool bTextMode = false;
+
+char * lpszMsgBoxBanner = NULL;
+HANDLE hWnd = 0;
+
+extern int ErrorMessageTX(LPSTR msg, unsigned int mode);
+extern int ErrorMessage(HWND hWnd, LPSTR msg, unsigned int mode);
 
 /*
 How MsgBox works:
