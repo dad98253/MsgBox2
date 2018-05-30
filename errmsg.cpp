@@ -67,7 +67,7 @@ int ErrorMessage(HWND hWnd, LPSTR msg, unsigned int mode)
     case IDOK:
         // TODO: add code
         break;
-	case NULL:
+	case JKNULL:
 		return 0;
     }
 
