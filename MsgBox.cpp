@@ -237,7 +237,7 @@ int MsgBox(const char * fmt, ... )
 	*b = '\0';
 
 #ifdef DEBUG
-	if (debugflag > 0) dfprintf(fp9, "%s\n", buffer);
+	dfprintf(__LINE__,__FILE__,TRACE, "%s\n", buffer);
 #endif
 
 //	fflush(stdout);

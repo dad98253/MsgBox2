@@ -54,7 +54,7 @@ int SysLogMessage (  LPSTR msg, unsigned int mode ) {
     if (NULL == hEventLog)
     {
 #ifdef DEBUG
-		dfprintf (fp9,"RegisterEventSource failed in SysLogMessage with 0x%x.\n", GetLastError());
+		dfprintf(__LINE__,__FILE__,TRACE,"RegisterEventSource failed in SysLogMessage with 0x%x.\n", GetLastError());
 #endif
         goto cleanup;
     }
@@ -64,14 +64,14 @@ int SysLogMessage (  LPSTR msg, unsigned int mode ) {
     if (!ReportEvent(hEventLog, wEventType, wCategory, dwEventID, NULL, 1, 0, (LPCSTR*)pInsertStrings, NULL))
     {
 #ifdef DEBUG
-		dfprintf (fp9,"ReportEvent failed in SysLogMessage with 0x%x for wEventType 0x%x, wCategory 0x%x, dwEventID 0x%x.\n", GetLastError(), wEventType, wCategory, dwEventID);
-		dfprintf (fp9,"msg = \"%s\".\n", msg);
+		dfprintf(__LINE__,__FILE__,TRACE,"ReportEvent failed in SysLogMessage with 0x%x for wEventType 0x%x, wCategory 0x%x, dwEventID 0x%x.\n", GetLastError(), wEventType, wCategory, dwEventID);
+		dfprintf(__LINE__,__FILE__,TRACE,"msg = \"%s\".\n", msg);
 #endif
         goto cleanup;
     }
 
 #ifdef DEBUG
-		dfprintf (fp9,"event successfully reported.\n");
+		dfprintf(__LINE__,__FILE__,TRACE,"event successfully reported.\n");
 #endif
 
 cleanup:
