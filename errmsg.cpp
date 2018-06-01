@@ -17,6 +17,10 @@
 
 #include "msgbox01.h"
 
+#ifdef WINDOZE
+#define JKNULL	NULL
+#endif	// WINDOZE
+
 int ErrorMessageTX(LPSTR msg, unsigned int mode);
 extern int ErrorMessage(HWND hWnd, LPSTR msg, unsigned int mode);
 
