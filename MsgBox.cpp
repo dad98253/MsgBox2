@@ -18,6 +18,9 @@
 #include "lindows.h"
 #endif
 
+#define MSGBOX01MAIN
+#include "msgbox01.h"
+
 //#include "StdAfx.h"
 //#include "resource.h"
 //#include "passwin.h"
