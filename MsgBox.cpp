@@ -29,7 +29,7 @@
 bool bTextMode = false;
 
 char * lpszMsgBoxBanner = NULL;
-HANDLE hWnd = 0;
+HWND hWnd = 0;
 
 extern int ErrorMessageTX(LPSTR msg, unsigned int mode);
 extern int ErrorMessage(HWND hWnd, LPSTR msg, unsigned int mode);
