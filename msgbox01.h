@@ -50,12 +50,14 @@ extern bool bTextMode;
 extern char * lpszMsgBoxBanner;
 extern HWND hWnd;
 
+
 #ifdef WINDOZE
-EXTERN	HWND hConWindowHandle;		// was defined in RedirectIOToConsole, but
-EXTERN	HANDLE hTutConsoleBuffer;	// defined in MsgBox now
-EXTERN	float fConWindowRowScale;	// defined in MsgBox
-EXTERN	float fConWindowColumnScale;	// defined in MsgBox
+extern	HWND hConWindowHandle;		// defined in RedirectIOToConsole in tutlib
+extern	HANDLE hTutConsoleBuffer;	// defined in RedirectIOToConsole in tutlib
+extern	float fConWindowRowScale;	// defined in RedirectIOToConsole in tutlib
+extern	float fConWindowColumnScale;	// defined in RedirectIOToConsole in tutlib
 #endif	// WINDOZE
+
 
 #define SYSLOGMESSAGE	0x01000000L
 // SYSLOGMESSAGE is set greater than the largest (documented) windows messagebox option
