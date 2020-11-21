@@ -240,7 +240,7 @@ int MsgBox(const char * fmt, ... )
 	*b = '\0';
 
 #ifdef DEBUG
-	dfprintf(__LINE__,__FILE__,TRACE, "%s\n", buffer);
+	dfprintf2(__LINE__,__FILE__,TRACE, "%s\n", buffer);
 #endif
 
 //	fflush(stdout);
