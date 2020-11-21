@@ -174,7 +174,7 @@ int MessageBoxTX(const char * msg, const char * lpszBanner, unsigned int mode) {
 char *strchrnul(const char *s, int c){
 	char * p;
 
-	if ( (p = strchr(s, c)) == NULL ) p = (char *)s + (unsigned int)strlen(s);
+	if ( (p = (char*)strchr(s, c)) == NULL ) p = (char *)s + (unsigned int)strlen(s);
 
 	return (p);
 
